@@ -68,7 +68,7 @@ body {
 	background-image: url(./img/bg.png);
 	background-repeat: no-repeat;
 	background-position: left bottom;
-	background-size: cover;
+	background-size: 100%;
 }
 
 nav {
