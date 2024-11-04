@@ -63,7 +63,7 @@
 
 body {
 	padding: 50px 0;
-	width: 100%;
+	width: 1280px;
 	background-color: rgba(9, 12, 17, 1);
 	background-image: url(./img/bg.png);
 	background-repeat: no-repeat;
@@ -71,11 +71,52 @@ body {
 	background-size: 100%;
 }
 
-nav {
-	text-align: center;
+.header_page {
+	width: 92.1875%;
+	margin: 0 3.907%;
 }
 
-.nav_list {
+.nav_header {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo_link {
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	position: relative;
+}
+
+.logo_link::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 82, 179, 0.6);
+	filter: blur(80.21px);
+}
+
+.logo_icon {
+	width: 60px;
+	height: 60px;
+	border-radius: 10px;
+}
+
+.logo_title {
+	font-size: 25px;
+	font-weight: 500;
+	background: linear-gradient(to right, #fff, #acd1fd);
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
+.nav_header_list {
+	height: 60px;
 	list-style: none;
 	padding: 0 30px;
 	display: inline-flex;
@@ -86,15 +127,12 @@ nav {
 	border-radius: 2000px;
 }
 
-.nav_item {
+.nav_header_item {
 	padding: 20px 0;
-	font-size: 20px;
-	font-weight: 400;
-	color: rgba(255, 255, 255, 0.8);
 	position: relative;
 }
 
-.nav_item::after {
+.nav_header_item::after {
 	content: '';
 	position: absolute;
 	bottom: 0;
@@ -107,24 +145,331 @@ nav {
 	transition: opacity 0.3s;
 }
 
-.nav_item.active {
+.nav_header_item.active::after {
+	opacity: 1;
+}
+
+.nav_header_link {
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 0.8);
+}
+
+.nav_header_item.active .nav_header_link {
 	color: rgba(255, 255, 255, 1);
 }
 
-.nav_item.active::after {
-	opacity: 1;
+.nav_header_btn {
+	height: 60px;
+	width: 208px;
+	padding: 0 20px;
+	font-size: 20px;
+	font-weight: 500;
+	color: #fff;
+	border: 2px solid rgba(255, 255, 255, 0.3);
+	border-radius: 200px;
+	background: none;
+}
+
+.performance_header {
+	margin-top: 50px;
+	border-radius: 20px;
+	padding: 130px 0;
+	width: 100%;
+	height: 660px;
+	background-image: url(./img/bg_header1.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center 0;
+	position: relative;
+	z-index: 0;
+}
+
+.performance_header::after {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background-image: url(./img/bg_header2.png);
+	opacity: 0.8;
+	border-radius: 20px;
+	z-index: 1;
+}
+
+.performance_header::before {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-radius: 20px;
+	left: 0;
+	top: 0;
+	background: linear-gradient(
+		to right,
+		#07101d 0%,
+		rgba(7, 16, 29, 0.2) 50%,
+		#07101d 100%
+	);
+	z-index: 2;
+}
+
+.performance_title {
+	font-size: 64px;
+	font-weight: 500;
+	color: #fff;
+	width: 50.5%;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	z-index: 3;
+}
+
+.performance_text {
+	font-size: 24px;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 0.8);
+	text-align: center;
+	width: 35.4%;
+	margin: 40px auto 60px;
+	position: relative;
+	z-index: 3;
+}
+
+.performance_btn {
+	margin: 0 auto;
+	display: block;
+	padding: 20px 24px;
+	border: none;
+	border-radius: 200px;
+	background-color: #fff;
+	color: rgba(19, 23, 28, 1);
+	font-size: 20px;
+	font-weight: 400;
+	position: relative;
+	z-index: 3;
+}
+
+.main_page {
+	width: 100%;
+	margin-top: 115px;
+}
+
+.section_title {
+	font-size: 40px;
+	font-weight: 500;
+	color: #99acbe;
+	margin: 0 3.907%;
+}
+
+.hits {
+	width: 100%;
+}
+
+.hits_products_container {
+	margin: 0 3.907%;
+	width: 92.1875%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 40px;
+	position: relative;
+}
+.hits_list_container {
+	overflow: hidden;
+}
+
+.hits_btn {
+	border: none;
+	width: 42px;
+	height: 42px;
+	border-radius: 50%;
+	background-color: #fff;
+	opacity: 0.8;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 1;
+	cursor: pointer;
+}
+
+.left {
+	left: -17px;
+}
+
+.right {
+	right: -17px;
+}
+
+.hits_list {
+	list-style: none;
+	display: flex;
+	transition: transform 0.5s ease;
+}
+
+.hits_item {
+	min-width: 100%;
+	height: 502px;
+	border-radius: 20px;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 40px;
+}
+
+.iPhone_hits {
+	background-image: url(./img/iPhone_hits.png);
+}
+
+.Dyson_hits {
+	background-image: url(./img/Dyson_hits.png);
+}
+
+.MacBook_hits {
+	background-image: url(./img/MacBook_hits.png);
+}
+
+.Xiaomi_hits {
+	background-image: url(./img/Xiaomi_hits.png);
+}
+
+.hits_product_info {
+	margin-left: 120px;
+}
+
+.iPhone_hits_info {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+}
+
+.Dyson_hits_info,
+.MacBook_hits_info {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.hits_product_logo-Apple {
+	width: 34px;
+	height: 40px;
+	object-fit: cover;
+}
+
+.hits_product_text {
+	font-size: 40px;
+	font-weight: 500;
+	color: #fff;
+}
+
+.Macbook_hits_text,
+.Xiaomi_hits_text {
+	color: rgba(9, 12, 17, 1);
+}
+
+.hits_product_link {
+	text-decoration: none;
+	margin-left: 120px;
+}
+
+.hits_product_btn {
+	border: none;
+	border-radius: 200px;
+	width: 151px;
+	padding: 12px 0;
+	font-size: 20px;
+	font-weight: 500;
+	color: #13171c;
+}
+
+.Macbook_hits_btn {
+	background-color: #006bea;
+	color: #fff;
+}
+
+.hits_product_marketing {
+	margin-top: 16px;
+	font-size: 24px;
+	font-weight: 400;
+	color: rgba(9, 12, 17, 0.6);
+}
+
+.philosophy {
+	width: 100%;
+	height: 700px;
+	background-image: url(./img/philosophy1.png);
+	background-repeat: no-repeat;
+	background-position: center -130px;
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	align-items: center;
+	gap: 35px;
+	position: relative;
+}
+
+.philosophy::before {
+	content: '';
+	position: absolute;
+	display: block;
+	left: 0;
+	bottom: -10px;
+	width: 100%;
+	height: 100px;
+	background: linear-gradient(rgba(19, 22, 26, 0) 15%, rgba(19, 22, 26, 1) 40%);
+	background: linear-gradient(
+		rgba(9, 12, 17, 0) 15%,
+		rgba(9, 12, 17, 0.5) 40%,
+		rgba(9, 12, 17, 0.7) 60%,
+		rgba(9, 12, 17, 1) 80%
+	);
+}
+
+.philosophy_introduction_text {
+	width: 186px;
+	font-size: 24px;
+	font-weight: 400;
+	color: rgba(207, 223, 241, 1);
+	text-align: center;
+	position: relative;
+	z-index: 1;
+}
+
+.philosophy_text {
+	width: 43.125%;
+	font-size: 32px;
+	font-weight: 500;
+	color: rgba(207, 223, 241, 1);
+	text-align: center;
+	position: relative;
+	z-index: 1;
+}
+
+.philosophy_description {
+	margin-top: 5px;
+	width: 55%;
+	font-size: 24px;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 0.7);
+	text-align: center;
+	margin-bottom: 45px;
+	position: relative;
+	z-index: 1;
+}
+
+.philosophy_definition {
+	color: rgba(255, 255, 255, 0.9);
 }
 
 .products {
 	padding: 50px 0;
 	background-color: rgba(9, 12, 17, 1);
-}
-
-.products_title {
-	font-size: 40px;
-	font-weight: 500;
-	color: #99acbe;
-	margin: 0 63px;
 }
 
 .products_nav {

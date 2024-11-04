@@ -1,16 +1,39 @@
-const chaptersPage = document.querySelectorAll('.nav_item');
-
-chaptersPage.forEach(item => {
-	item.addEventListener('click', () => {
-		chaptersPage.forEach(i => i.classList.remove('active'));
-
-		item.classList.add('active');
+// nav_header_list
+const chaptersLink = document.querySelectorAll('.nav_header_link');
+const chaptersItem = document.querySelectorAll('.nav_header_item');
+chaptersLink.forEach(link => {
+	link.addEventListener('click', () => {
+		event.preventDefault();
+		chaptersItem.forEach(item => item.classList.remove('active'));
+		link.parentElement.classList.add('active');
 	});
 });
 
+// hits_products_container
+const hitsList = document.querySelector('.hits_list');
+const hitsItem = document.querySelectorAll('.hits_item');
+const left = document.querySelector('.left');
+const right = document.querySelector('.right');
+let currentIndex = 0;
+function updateProductView() {
+	hitsList.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+right.addEventListener('click', () => {
+	if (currentIndex < hitsItem.length - 1) {
+		currentIndex++;
+		updateProductView();
+	}
+});
+left.addEventListener('click', () => {
+	if (currentIndex > 0) {
+		currentIndex--;
+		updateProductView();
+	}
+});
+
+// products_nav
 const chaptersProducts = document.querySelectorAll('.products_nav_item');
 const productsList = document.querySelectorAll('.products_list');
-
 chaptersProducts.forEach(item => {
 	item.addEventListener('click', () => {
 		chaptersProducts.forEach(nav => nav.classList.remove('active'));
