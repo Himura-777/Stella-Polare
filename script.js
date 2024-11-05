@@ -44,3 +44,7 @@ chaptersProducts.forEach(item => {
 		document.getElementById(contentId).classList.add('active');
 	});
 });
+
+// company_icons_list
+const companyIconsList = document.querySelector('.company_icons_list');
+companyIconsList.innerHTML += companyIconsList.innerHTML;
