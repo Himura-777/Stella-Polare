@@ -63,7 +63,6 @@
 
 html {
 	scroll-behavior: smooth;
-	scroll-padding-top: 50px;
 }
 
 body {
@@ -138,7 +137,12 @@ body {
 	border-radius: 2000px;
 }
 
-.nav_header_item {
+.nav_header_link {
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 0.8);
+	position: relative;
 	padding: 18px 0;
 }
 
@@ -159,20 +163,16 @@ body {
 	opacity: 1;
 }
 
-.nav_header_link {
-	text-decoration: none;
-	font-size: 20px;
-	font-weight: 400;
-	color: rgba(255, 255, 255, 0.8);
-	position: relative;
-}
-
 .nav_header_link.active {
 	color: rgba(255, 255, 255, 1);
 }
 
 .nav_header_btn_link {
 	text-decoration: none;
+}
+
+:target {
+	scroll-margin-top: 164px;
 }
 
 .nav_header_btn {

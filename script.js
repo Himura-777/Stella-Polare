@@ -1,11 +1,9 @@
 // nav_header_list
 const chaptersLink = document.querySelectorAll('.nav_header_link');
-const chaptersItem = document.querySelectorAll('.nav_header_item');
-chaptersItem.forEach(item => {
-	item.addEventListener('click', () => {
-		event.preventDefault();
-		chaptersLink.forEach(link => link.classList.remove('active'));
-		item.parentElement.classList.add('active');
+chaptersLink.forEach(link => {
+	link.addEventListener('click', event => {
+		chaptersLink.forEach(i => i.classList.remove('active'));
+		link.classList.add('active');
 	});
 });
 
