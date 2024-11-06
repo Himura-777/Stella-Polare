@@ -73,6 +73,7 @@ body {
 	background-position: left bottom;
 	background-size: 100%;
 	padding-bottom: 50px;
+	margin: 0 auto;
 }
 
 .header_page {
@@ -259,12 +260,17 @@ body {
 	padding: 20px 24px;
 	border: none;
 	border-radius: 200px;
-	background-color: #fff;
+	background-color: rgba(255, 255, 255, 1);
 	color: rgba(19, 23, 28, 1);
 	font-size: 20px;
 	font-weight: 400;
 	position: relative;
 	z-index: 3;
+}
+
+.performance_btn:hover {
+	background-color: rgba(255, 255, 255, 0.6);
+	cursor: pointer;
 }
 
 .section_title {
@@ -405,9 +411,18 @@ body {
 	color: #13171c;
 }
 
+.hits_product_btn:hover {
+	background-color: rgba(255, 255, 255, 0.6);
+	cursor: pointer;
+}
+
 .Macbook_hits_btn {
 	background-color: #006bea;
 	color: #fff;
+}
+
+.Macbook_hits_btn:hover {
+	background-color: rgba(0, 107, 234, 0.6);
 }
 
 .hits_product_marketing {
@@ -940,6 +955,10 @@ body {
 	white-space: normal;
 }
 
+.feedbacks-btn_link {
+	text-decoration: none;
+}
+
 .feedbacks-btn {
 	margin: 90px 50px 0;
 	height: 90px;
@@ -953,6 +972,11 @@ body {
 	align-items: center;
 	position: relative;
 	z-index: 2;
+}
+
+.feedbacks-btn:hover {
+	background-color: rgba(255, 255, 255, 0.4);
+	cursor: pointer;
 }
 
 .feedbacks-btn_text {
@@ -1309,6 +1333,7 @@ body {
 	color: rgba(255, 255, 255, 1);
 	position: relative;
 	z-index: 2;
+	cursor: pointer;
 }
 
 .request_sent-btn:active {
