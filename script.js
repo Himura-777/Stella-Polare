@@ -1,11 +1,11 @@
 // nav_header_list
 const chaptersLink = document.querySelectorAll('.nav_header_link');
 const chaptersItem = document.querySelectorAll('.nav_header_item');
-chaptersLink.forEach(link => {
-	link.addEventListener('click', () => {
+chaptersItem.forEach(item => {
+	item.addEventListener('click', () => {
 		event.preventDefault();
-		chaptersItem.forEach(item => item.classList.remove('active'));
-		link.parentElement.classList.add('active');
+		chaptersLink.forEach(link => link.classList.remove('active'));
+		item.parentElement.classList.add('active');
 	});
 });
 
