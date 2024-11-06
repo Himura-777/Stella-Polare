@@ -171,9 +171,13 @@ body {
 	color: rgba(255, 255, 255, 1);
 }
 
+.nav_header_btn_link {
+	text-decoration: none;
+}
+
 .nav_header_btn {
-	height: 60px;
-	width: 208px;
+	height: 64px;
+	width: 210px;
 	padding: 0 20px;
 	font-size: 20px;
 	font-weight: 500;
@@ -181,6 +185,13 @@ body {
 	border: 2px solid rgba(255, 255, 255, 0.3);
 	border-radius: 200px;
 	background: none;
+}
+
+.nav_header_btn:hover {
+	cursor: pointer;
+	background: rgba(255, 255, 255, 1);
+	color: rgba(34, 36, 41, 1);
+	border: 2px solid rgba(255, 255, 255, 1);
 }
 
 .main_page {
