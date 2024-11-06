@@ -45,4 +45,27 @@ chaptersProducts.forEach(item => {
 
 // company_icons_list
 const companyIconsList = document.querySelector('.company_icons_list');
-companyIconsList.innerHTML += companyIconsList.innerHTML;
+for (let i = 0; i < 7; i++) {
+	companyIconsList.innerHTML += companyIconsList.innerHTML;
+}
+
+// question_list
+const questionItemContainer = document.querySelectorAll(
+	'.question_item_container'
+);
+const buttons = document.querySelectorAll('.question_item_btn');
+questionItemContainer.forEach((questionItem, index) => {
+	const content = questionItem.nextElementSibling;
+	const icon = buttons[index];
+	questionItem.addEventListener('click', function () {
+		icon.classList.toggle('rotate');
+		if (content.classList.contains('show')) {
+			content.classList.remove('show');
+		} else {
+			document
+				.querySelectorAll('.question_item_answer')
+				.forEach(c => c.classList.remove('show'));
+			content.classList.add('show');
+		}
+	});
+});

@@ -66,7 +66,6 @@ html {
 }
 
 body {
-	width: 1280px;
 	background-color: rgba(9, 12, 17, 1);
 	background-image: url(./img/bg.png);
 	background-repeat: no-repeat;
@@ -77,12 +76,9 @@ body {
 }
 
 .header_page {
-	position: sticky;
-	top: 0;
 	width: 100%;
 	padding: 50px 3.907%;
 	z-index: 1000;
-	background-color: rgba(9, 12, 17, 1);
 }
 
 .nav_header {
@@ -126,6 +122,11 @@ body {
 }
 
 .nav_header_list {
+	position: fixed;
+	top: 52px;
+	left: 50%;
+	transform: translateX(-50%);
+	backdrop-filter: blur(100px);
 	height: 60px;
 	list-style: none;
 	padding: 0 30px;
@@ -135,6 +136,7 @@ body {
 	gap: 40px;
 	background: rgba(255, 255, 255, 0.1);
 	border-radius: 2000px;
+	z-index: 1000;
 }
 
 .nav_header_link {
@@ -303,6 +305,8 @@ body {
 .hits {
 	margin-top: 116px;
 	width: 100%;
+	position: relative;
+	z-index: 1;
 }
 
 .hits_products_container {
@@ -316,6 +320,7 @@ body {
 }
 .hits_list_container {
 	overflow: hidden;
+	width: 100%;
 }
 
 .hits_btn {
@@ -352,6 +357,7 @@ body {
 	border-radius: 20px;
 	background-repeat: no-repeat;
 	background-position: center;
+	background-size: cover;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -446,36 +452,106 @@ body {
 
 .philosophy {
 	width: 100%;
-	height: 700px;
-	background-image: url(./img/philosophy1.png);
-	background-repeat: no-repeat;
-	background-position: center -130px;
-	display: flex;
-	flex-direction: column;
-	justify-content: end;
-	align-items: center;
-	gap: 35px;
+	height: 710px;
 	position: relative;
 }
 
-.philosophy::before {
-	content: '';
-	position: absolute;
-	display: block;
-	left: 0;
-	bottom: -10px;
+.philosophy_container {
 	width: 100%;
-	height: 100px;
-	background: linear-gradient(rgba(19, 22, 26, 0) 15%, rgba(19, 22, 26, 1) 40%);
-	background: linear-gradient(
-		rgba(9, 12, 17, 0) 15%,
-		rgba(9, 12, 17, 0.5) 40%,
-		rgba(9, 12, 17, 0.7) 60%,
-		rgba(9, 12, 17, 1) 80%
+	height: 100%;
+	display: flex;
+	align-items: flex-end;
+	padding-bottom: 72px;
+	position: relative;
+}
+
+.philosophy_container::before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 60%;
+	background: rgba(217, 217, 217, 0.02);
+	filter: blur(60px);
+	backdrop-filter: blur(4px);
+	box-shadow: 0 0 20px 10px rgba(217, 217, 217, 0.2);
+}
+
+.conic-gradient_container {
+	display: flex;
+	position: absolute;
+	top: -141px;
+	width: 100%;
+	z-index: -1;
+}
+
+.conic-gradient_left {
+	width: 50%;
+	height: 560px;
+	background: conic-gradient(
+		from 90deg,
+		#3378ff 0%,
+		#072b71 18%,
+		#090c11 36%,
+		#090c11 40%,
+		#090c11 46%,
+		#090c11 56%,
+		#090c11 67%,
+		#090c11 73%,
+		#090c11 78%,
+		#090c11 87%,
+		#090c11 94%,
+		#070707 100%,
+		#6599ff 100%
 	);
 }
 
+.conic-gradient_right {
+	width: 50%;
+	height: 560px;
+	background: conic-gradient(
+		from 90deg,
+		#3378ff 0%,
+		#072b71 18%,
+		#090c11 36%,
+		#090c11 40%,
+		#090c11 46%,
+		#090c11 56%,
+		#090c11 67%,
+		#090c11 73%,
+		#090c11 78%,
+		#090c11 87%,
+		#090c11 94%,
+		#070707 100%,
+		#6599ff 100%
+	);
+	transform: scaleX(-1);
+}
+
+.conic-gradient_overlay {
+	position: absolute;
+	width: 619px;
+	height: 255px;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 0;
+	background: #0075ff;
+	filter: blur(265px);
+}
+
+.philosophy_text_container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 35px;
+}
+
 .philosophy_introduction_text {
+	width: 186px;
 	font-size: 24px;
 	font-weight: 400;
 	color: rgba(207, 223, 241, 1);
@@ -535,7 +611,6 @@ body {
 	font-weight: 400;
 	color: rgba(255, 255, 255, 0.7);
 	text-align: center;
-	margin-bottom: 45px;
 	position: relative;
 	z-index: 1;
 }
@@ -711,6 +786,7 @@ body {
 }
 
 .products_list {
+	padding-left: 3.907%;
 	margin-top: 72px;
 	list-style-type: none;
 	display: none;
@@ -1124,15 +1200,16 @@ body {
 }
 
 .questions_title_container {
-	width: 347px;
+	width: 29.4%;
 }
 
 .questions_section_title {
 	margin: 0;
+	width: 100%;
 }
 
 .questions_title_text {
-	width: 275px;
+	width: 79.25%;
 	margin-top: 35px;
 	font-size: 24px;
 	font-weight: 400;
@@ -1159,23 +1236,24 @@ body {
 }
 
 .questions_list {
+	width: 52.12%;
 	list-style: none;
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
-	width: 615px;
 }
 
-.question_item {
+.question_item_container {
 	width: 100%;
 	height: 74px;
 	border: 1px solid rgba(255, 255, 255, 0.3);
 	border-radius: 20px;
 	background: rgba(255, 255, 255, 0.1);
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 	justify-content: space-between;
 	padding: 25px;
+	transition: all 0.3s ease;
 }
 
 .question_item_text {
@@ -1187,9 +1265,31 @@ body {
 .question_item_btn {
 	border: none;
 	background: none;
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 	justify-content: center;
+	transition: transform 0.3s ease;
+}
+
+.question_item_btn.rotate {
+	transform: rotate(180deg);
+}
+
+.question_item_answer {
+	font-size: 24px;
+	font-weight: 500;
+	color: rgba(255, 255, 255, 0.6);
+	padding: 0 25px;
+	opacity: 0;
+	max-height: 0;
+	overflow: hidden;
+	transition: opacity 0.3s ease, max-height 0.3s ease, margin 0.3s ease;
+}
+
+.question_item_answer.show {
+	margin: 30px 0 20px;
+	opacity: 1;
+	max-height: 500px;
 }
 
 .company_icons {
@@ -1198,6 +1298,27 @@ body {
 	margin-top: 120px;
 	opacity: 0.4;
 	overflow: hidden;
+	position: relative;
+}
+
+.company_icons::before {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	right: 0;
+	background: linear-gradient(
+		to right,
+		rgba(10, 15, 22, 0.8) 3%,
+		rgba(10, 15, 22, 0),
+		rgba(10, 15, 22, 0),
+		rgba(10, 15, 22, 0),
+		rgba(10, 15, 22, 0),
+		rgba(10, 15, 22, 0.8) 97%
+	);
+	z-index: 1;
 }
 
 .company_icons_list {
