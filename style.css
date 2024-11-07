@@ -723,22 +723,23 @@ body {
 }
 
 .products_nav_container {
-	margin: 60px 3.907% 0;
-	padding: 4px;
-	background-color: rgba(255, 255, 255, 0.05);
-	border: 1px solid rgba(255, 255, 255, 0.1);
-	border-radius: 12px;
+	margin-top: 60px;
 }
 
 .products_nav {
 	list-style-type: none;
-	display: flex;
+	display: inline-flex;
 	gap: 20px;
+	padding: 4px;
+	background-color: rgba(255, 255, 255, 0.05);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 12px;
 	align-items: center;
-	overflow-x: scroll;
+	overflow-x: auto;
 	white-space: nowrap;
 	scrollbar-width: none;
-	transition: ;
+	width: 92.1875%;
+	margin: 0 3.907%;
 }
 
 .products_nav_item {
@@ -1265,6 +1266,7 @@ body {
 	justify-content: space-between;
 	padding: 25px;
 	transition: all 0.3s ease;
+	cursor: pointer;
 }
 
 .question_item_text {
